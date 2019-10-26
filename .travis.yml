@@ -52,7 +52,7 @@ deploy:
     repo: frainzy1477/clashX
     branch: master
     tags: true 
-
+ 
 after_deploy:
 - 'curl -u frainzy1477:$GitHub_Token -X POST https://api.github.com/repos/frainzy1477/clashX/pages/builds -H "Accept: application/vnd.github.mister-fantastic-preview+json"'
 - fastlane run upload_symbols_to_crashlytics
